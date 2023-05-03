@@ -1,0 +1,5 @@
+.idea/
+venv/
+*.csv
+data_to_test/
+__pycache__
