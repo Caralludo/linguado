@@ -35,7 +35,7 @@ working for BE:SEC (@BESEC_byEmetel)
 
 positional arguments:
   Files                 Files to analyze
-  Language              Language of the files. Options: javascript, php, python2, python3, vba
+  Language              Language of the files. Options: c, javascript, php, python2, python3, vba
 
 options:
   -h, --help            show this help message and exit
@@ -67,6 +67,7 @@ linguado source1.py source2.py python3 -o output.csv
 
 ### Available languages
 For the moment, the tool can compare the following programming languages:
+* C
 * JavaScript
 * PHP
 * Python2
@@ -86,6 +87,8 @@ antlr4 -Dlanguage=Python3 *.g4
 ```python
 from mygrammar.MyGrammarLexer import MyGrammarLexer
 from mygrammar.MyGrammarParser import MyGrammarParser
+from linguado.c.CLexer import CLexer
+from linguado.c.CParser import CParser
 from javascript.JavaScriptLexer import JavaScriptLexer
 from javascript.JavaScriptParser import JavaScriptParser
 from php.PhpLexer import PhpLexer
@@ -100,6 +103,7 @@ from vba.vbaParser import vbaParser
 6. Modify the dictionary in the file linguado/main.py putting the lerxer, the parser and the first rule of the grammar
 ```python
     language_functions = {
+        "c": [CLexer, CParser, "translationUnit"],
         "javascript": [JavaScriptLexer, JavaScriptParser, "program"],
         "mygrammar": [MyGrammarLexer, MyGrammarParser, "first_rule"],
         "php": [PhpLexer, PhpParser, "htmlDocument"],
