@@ -10,6 +10,8 @@ from linguado.sample_generator import generate_sample_star
 from linguado.weisfeiler_lehman import wl_subtree_kernel
 from linguado.writer import write_matrix
 
+from linguado.c.CLexer import CLexer
+from linguado.c.CParser import CParser
 from linguado.javascript.JavaScriptLexer import JavaScriptLexer
 from linguado.javascript.JavaScriptParser import JavaScriptParser
 from linguado.php.PhpLexer import PhpLexer
@@ -24,6 +26,7 @@ from linguado.vba.vbaParser import vbaParser
 
 def main():
     language_functions = {
+        "c": [CLexer, CParser, "translationUnit"],
         "javascript": [JavaScriptLexer, JavaScriptParser, "program"],
         "php": [PhpLexer, PhpParser, "htmlDocument"],
         "python2": [Python2Lexer, Python2Parser, "file_input"],
