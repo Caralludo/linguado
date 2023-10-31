@@ -16,6 +16,8 @@ from linguado.javascript.JavaScriptLexer import JavaScriptLexer
 from linguado.javascript.JavaScriptParser import JavaScriptParser
 from linguado.php.PhpLexer import PhpLexer
 from linguado.php.PhpParser import PhpParser
+from linguado.nasm_x86_64.nasm_x86_64_Lexer import nasm_x86_64_Lexer
+from linguado.nasm_x86_64.nasm_x86_64_Parser import nasm_x86_64_Parser
 from linguado.python2.Python2Lexer import Python2Lexer
 from linguado.python2.Python2Parser import Python2Parser
 from linguado.python3.Python3Lexer import Python3Lexer
@@ -29,6 +31,7 @@ def main():
         "c": [CLexer, CParser, "translationUnit"],
         "javascript": [JavaScriptLexer, JavaScriptParser, "program"],
         "php": [PhpLexer, PhpParser, "htmlDocument"],
+        "nasm": [nasm_x86_64_Lexer, nasm_x86_64_Parser, "program"],
         "python2": [Python2Lexer, Python2Parser, "file_input"],
         "python3": [Python3Lexer, Python3Parser, "file_input"],
         "vba": [vbaLexer, vbaParser, "startRule"]

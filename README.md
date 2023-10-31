@@ -35,7 +35,7 @@ working for BE:SEC (@BESEC_byEmetel)
 
 positional arguments:
   Files                 Files to analyze
-  Language              Language of the files. Options: c, javascript, php, python2, python3, vba
+  Language              Language of the files. Options: c, javascript, nasm, php, python2, python3, vba
 
 options:
   -h, --help            show this help message and exit
@@ -69,6 +69,7 @@ linguado source1.py source2.py python3 -o output.csv
 For the moment, the tool can compare the following programming languages:
 * C
 * JavaScript
+* NASM
 * PHP
 * Python2
 * Python3
