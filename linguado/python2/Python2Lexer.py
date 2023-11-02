@@ -1,4 +1,4 @@
-# Generated from Python2.g4 by ANTLR 4.12.0
+# Generated from Python2.g4 by ANTLR 4.13.1
 from antlr4 import *
 from io import StringIO
 import sys
@@ -8,7 +8,7 @@ else:
     from typing.io import TextIO
 
 
-from .Python2Parser import Python2Parser
+from linguado.python2.Python2Parser import Python2Parser
 from antlr4.Token  import CommonToken
 
 class IndentStack:
@@ -420,7 +420,7 @@ class Python2Lexer(Lexer):
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.12.0")
+        self.checkVersion("4.13.1")
         self._interp = LexerATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
         self._actions = None
         self._predicates = None
