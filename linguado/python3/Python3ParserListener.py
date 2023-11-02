@@ -1,12 +1,12 @@
-# Generated from Python3.g4 by ANTLR 4.12.0
+# Generated from Python3Parser.g4 by ANTLR 4.13.1
 from antlr4 import *
-if __name__ is not None and "." in __name__:
+if "." in __name__:
     from .Python3Parser import Python3Parser
 else:
     from Python3Parser import Python3Parser
 
 # This class defines a complete listener for a parse tree produced by Python3Parser.
-class Python3Listener(ParseTreeListener):
+class Python3ParserListener(ParseTreeListener):
 
     # Enter a parse tree produced by Python3Parser#single_input.
     def enterSingle_input(self, ctx:Python3Parser.Single_inputContext):
@@ -134,21 +134,21 @@ class Python3Listener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by Python3Parser#simple_stmts.
+    def enterSimple_stmts(self, ctx:Python3Parser.Simple_stmtsContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#simple_stmts.
+    def exitSimple_stmts(self, ctx:Python3Parser.Simple_stmtsContext):
+        pass
+
+
     # Enter a parse tree produced by Python3Parser#simple_stmt.
     def enterSimple_stmt(self, ctx:Python3Parser.Simple_stmtContext):
         pass
 
     # Exit a parse tree produced by Python3Parser#simple_stmt.
     def exitSimple_stmt(self, ctx:Python3Parser.Simple_stmtContext):
-        pass
-
-
-    # Enter a parse tree produced by Python3Parser#small_stmt.
-    def enterSmall_stmt(self, ctx:Python3Parser.Small_stmtContext):
-        pass
-
-    # Exit a parse tree produced by Python3Parser#small_stmt.
-    def exitSmall_stmt(self, ctx:Python3Parser.Small_stmtContext):
         pass
 
 
@@ -440,12 +440,354 @@ class Python3Listener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by Python3Parser#suite.
-    def enterSuite(self, ctx:Python3Parser.SuiteContext):
+    # Enter a parse tree produced by Python3Parser#block.
+    def enterBlock(self, ctx:Python3Parser.BlockContext):
         pass
 
-    # Exit a parse tree produced by Python3Parser#suite.
-    def exitSuite(self, ctx:Python3Parser.SuiteContext):
+    # Exit a parse tree produced by Python3Parser#block.
+    def exitBlock(self, ctx:Python3Parser.BlockContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#match_stmt.
+    def enterMatch_stmt(self, ctx:Python3Parser.Match_stmtContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#match_stmt.
+    def exitMatch_stmt(self, ctx:Python3Parser.Match_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#subject_expr.
+    def enterSubject_expr(self, ctx:Python3Parser.Subject_exprContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#subject_expr.
+    def exitSubject_expr(self, ctx:Python3Parser.Subject_exprContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#star_named_expressions.
+    def enterStar_named_expressions(self, ctx:Python3Parser.Star_named_expressionsContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#star_named_expressions.
+    def exitStar_named_expressions(self, ctx:Python3Parser.Star_named_expressionsContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#star_named_expression.
+    def enterStar_named_expression(self, ctx:Python3Parser.Star_named_expressionContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#star_named_expression.
+    def exitStar_named_expression(self, ctx:Python3Parser.Star_named_expressionContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#case_block.
+    def enterCase_block(self, ctx:Python3Parser.Case_blockContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#case_block.
+    def exitCase_block(self, ctx:Python3Parser.Case_blockContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#guard.
+    def enterGuard(self, ctx:Python3Parser.GuardContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#guard.
+    def exitGuard(self, ctx:Python3Parser.GuardContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#patterns.
+    def enterPatterns(self, ctx:Python3Parser.PatternsContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#patterns.
+    def exitPatterns(self, ctx:Python3Parser.PatternsContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#pattern.
+    def enterPattern(self, ctx:Python3Parser.PatternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#pattern.
+    def exitPattern(self, ctx:Python3Parser.PatternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#as_pattern.
+    def enterAs_pattern(self, ctx:Python3Parser.As_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#as_pattern.
+    def exitAs_pattern(self, ctx:Python3Parser.As_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#or_pattern.
+    def enterOr_pattern(self, ctx:Python3Parser.Or_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#or_pattern.
+    def exitOr_pattern(self, ctx:Python3Parser.Or_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#closed_pattern.
+    def enterClosed_pattern(self, ctx:Python3Parser.Closed_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#closed_pattern.
+    def exitClosed_pattern(self, ctx:Python3Parser.Closed_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#literal_pattern.
+    def enterLiteral_pattern(self, ctx:Python3Parser.Literal_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#literal_pattern.
+    def exitLiteral_pattern(self, ctx:Python3Parser.Literal_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#literal_expr.
+    def enterLiteral_expr(self, ctx:Python3Parser.Literal_exprContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#literal_expr.
+    def exitLiteral_expr(self, ctx:Python3Parser.Literal_exprContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#complex_number.
+    def enterComplex_number(self, ctx:Python3Parser.Complex_numberContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#complex_number.
+    def exitComplex_number(self, ctx:Python3Parser.Complex_numberContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#signed_number.
+    def enterSigned_number(self, ctx:Python3Parser.Signed_numberContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#signed_number.
+    def exitSigned_number(self, ctx:Python3Parser.Signed_numberContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#signed_real_number.
+    def enterSigned_real_number(self, ctx:Python3Parser.Signed_real_numberContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#signed_real_number.
+    def exitSigned_real_number(self, ctx:Python3Parser.Signed_real_numberContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#real_number.
+    def enterReal_number(self, ctx:Python3Parser.Real_numberContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#real_number.
+    def exitReal_number(self, ctx:Python3Parser.Real_numberContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#imaginary_number.
+    def enterImaginary_number(self, ctx:Python3Parser.Imaginary_numberContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#imaginary_number.
+    def exitImaginary_number(self, ctx:Python3Parser.Imaginary_numberContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#capture_pattern.
+    def enterCapture_pattern(self, ctx:Python3Parser.Capture_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#capture_pattern.
+    def exitCapture_pattern(self, ctx:Python3Parser.Capture_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#pattern_capture_target.
+    def enterPattern_capture_target(self, ctx:Python3Parser.Pattern_capture_targetContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#pattern_capture_target.
+    def exitPattern_capture_target(self, ctx:Python3Parser.Pattern_capture_targetContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#wildcard_pattern.
+    def enterWildcard_pattern(self, ctx:Python3Parser.Wildcard_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#wildcard_pattern.
+    def exitWildcard_pattern(self, ctx:Python3Parser.Wildcard_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#value_pattern.
+    def enterValue_pattern(self, ctx:Python3Parser.Value_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#value_pattern.
+    def exitValue_pattern(self, ctx:Python3Parser.Value_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#attr.
+    def enterAttr(self, ctx:Python3Parser.AttrContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#attr.
+    def exitAttr(self, ctx:Python3Parser.AttrContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#name_or_attr.
+    def enterName_or_attr(self, ctx:Python3Parser.Name_or_attrContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#name_or_attr.
+    def exitName_or_attr(self, ctx:Python3Parser.Name_or_attrContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#group_pattern.
+    def enterGroup_pattern(self, ctx:Python3Parser.Group_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#group_pattern.
+    def exitGroup_pattern(self, ctx:Python3Parser.Group_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#sequence_pattern.
+    def enterSequence_pattern(self, ctx:Python3Parser.Sequence_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#sequence_pattern.
+    def exitSequence_pattern(self, ctx:Python3Parser.Sequence_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#open_sequence_pattern.
+    def enterOpen_sequence_pattern(self, ctx:Python3Parser.Open_sequence_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#open_sequence_pattern.
+    def exitOpen_sequence_pattern(self, ctx:Python3Parser.Open_sequence_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#maybe_sequence_pattern.
+    def enterMaybe_sequence_pattern(self, ctx:Python3Parser.Maybe_sequence_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#maybe_sequence_pattern.
+    def exitMaybe_sequence_pattern(self, ctx:Python3Parser.Maybe_sequence_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#maybe_star_pattern.
+    def enterMaybe_star_pattern(self, ctx:Python3Parser.Maybe_star_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#maybe_star_pattern.
+    def exitMaybe_star_pattern(self, ctx:Python3Parser.Maybe_star_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#star_pattern.
+    def enterStar_pattern(self, ctx:Python3Parser.Star_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#star_pattern.
+    def exitStar_pattern(self, ctx:Python3Parser.Star_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#mapping_pattern.
+    def enterMapping_pattern(self, ctx:Python3Parser.Mapping_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#mapping_pattern.
+    def exitMapping_pattern(self, ctx:Python3Parser.Mapping_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#items_pattern.
+    def enterItems_pattern(self, ctx:Python3Parser.Items_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#items_pattern.
+    def exitItems_pattern(self, ctx:Python3Parser.Items_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#key_value_pattern.
+    def enterKey_value_pattern(self, ctx:Python3Parser.Key_value_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#key_value_pattern.
+    def exitKey_value_pattern(self, ctx:Python3Parser.Key_value_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#double_star_pattern.
+    def enterDouble_star_pattern(self, ctx:Python3Parser.Double_star_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#double_star_pattern.
+    def exitDouble_star_pattern(self, ctx:Python3Parser.Double_star_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#class_pattern.
+    def enterClass_pattern(self, ctx:Python3Parser.Class_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#class_pattern.
+    def exitClass_pattern(self, ctx:Python3Parser.Class_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#positional_patterns.
+    def enterPositional_patterns(self, ctx:Python3Parser.Positional_patternsContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#positional_patterns.
+    def exitPositional_patterns(self, ctx:Python3Parser.Positional_patternsContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#keyword_patterns.
+    def enterKeyword_patterns(self, ctx:Python3Parser.Keyword_patternsContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#keyword_patterns.
+    def exitKeyword_patterns(self, ctx:Python3Parser.Keyword_patternsContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#keyword_pattern.
+    def enterKeyword_pattern(self, ctx:Python3Parser.Keyword_patternContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#keyword_pattern.
+    def exitKeyword_pattern(self, ctx:Python3Parser.Keyword_patternContext):
         pass
 
 
@@ -548,69 +890,6 @@ class Python3Listener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by Python3Parser#xor_expr.
-    def enterXor_expr(self, ctx:Python3Parser.Xor_exprContext):
-        pass
-
-    # Exit a parse tree produced by Python3Parser#xor_expr.
-    def exitXor_expr(self, ctx:Python3Parser.Xor_exprContext):
-        pass
-
-
-    # Enter a parse tree produced by Python3Parser#and_expr.
-    def enterAnd_expr(self, ctx:Python3Parser.And_exprContext):
-        pass
-
-    # Exit a parse tree produced by Python3Parser#and_expr.
-    def exitAnd_expr(self, ctx:Python3Parser.And_exprContext):
-        pass
-
-
-    # Enter a parse tree produced by Python3Parser#shift_expr.
-    def enterShift_expr(self, ctx:Python3Parser.Shift_exprContext):
-        pass
-
-    # Exit a parse tree produced by Python3Parser#shift_expr.
-    def exitShift_expr(self, ctx:Python3Parser.Shift_exprContext):
-        pass
-
-
-    # Enter a parse tree produced by Python3Parser#arith_expr.
-    def enterArith_expr(self, ctx:Python3Parser.Arith_exprContext):
-        pass
-
-    # Exit a parse tree produced by Python3Parser#arith_expr.
-    def exitArith_expr(self, ctx:Python3Parser.Arith_exprContext):
-        pass
-
-
-    # Enter a parse tree produced by Python3Parser#term.
-    def enterTerm(self, ctx:Python3Parser.TermContext):
-        pass
-
-    # Exit a parse tree produced by Python3Parser#term.
-    def exitTerm(self, ctx:Python3Parser.TermContext):
-        pass
-
-
-    # Enter a parse tree produced by Python3Parser#factor.
-    def enterFactor(self, ctx:Python3Parser.FactorContext):
-        pass
-
-    # Exit a parse tree produced by Python3Parser#factor.
-    def exitFactor(self, ctx:Python3Parser.FactorContext):
-        pass
-
-
-    # Enter a parse tree produced by Python3Parser#power.
-    def enterPower(self, ctx:Python3Parser.PowerContext):
-        pass
-
-    # Exit a parse tree produced by Python3Parser#power.
-    def exitPower(self, ctx:Python3Parser.PowerContext):
-        pass
-
-
     # Enter a parse tree produced by Python3Parser#atom_expr.
     def enterAtom_expr(self, ctx:Python3Parser.Atom_exprContext):
         pass
@@ -626,6 +905,15 @@ class Python3Listener(ParseTreeListener):
 
     # Exit a parse tree produced by Python3Parser#atom.
     def exitAtom(self, ctx:Python3Parser.AtomContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#name.
+    def enterName(self, ctx:Python3Parser.NameContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#name.
+    def exitName(self, ctx:Python3Parser.NameContext):
         pass
 
 
@@ -656,12 +944,12 @@ class Python3Listener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by Python3Parser#subscript.
-    def enterSubscript(self, ctx:Python3Parser.SubscriptContext):
+    # Enter a parse tree produced by Python3Parser#subscript_.
+    def enterSubscript_(self, ctx:Python3Parser.Subscript_Context):
         pass
 
-    # Exit a parse tree produced by Python3Parser#subscript.
-    def exitSubscript(self, ctx:Python3Parser.SubscriptContext):
+    # Exit a parse tree produced by Python3Parser#subscript_.
+    def exitSubscript_(self, ctx:Python3Parser.Subscript_Context):
         pass
 
 
@@ -779,6 +1067,15 @@ class Python3Listener(ParseTreeListener):
 
     # Exit a parse tree produced by Python3Parser#yield_arg.
     def exitYield_arg(self, ctx:Python3Parser.Yield_argContext):
+        pass
+
+
+    # Enter a parse tree produced by Python3Parser#strings.
+    def enterStrings(self, ctx:Python3Parser.StringsContext):
+        pass
+
+    # Exit a parse tree produced by Python3Parser#strings.
+    def exitStrings(self, ctx:Python3Parser.StringsContext):
         pass
 
 
