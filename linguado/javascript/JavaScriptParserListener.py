@@ -1,6 +1,6 @@
-# Generated from JavaScriptParser.g4 by ANTLR 4.12.0
+# Generated from JavaScriptParser.g4 by ANTLR 4.13.1
 from antlr4 import *
-if __name__ is not None and "." in __name__:
+if "." in __name__:
     from .JavaScriptParser import JavaScriptParser
 else:
     from JavaScriptParser import JavaScriptParser
@@ -71,12 +71,39 @@ class JavaScriptParserListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by JavaScriptParser#moduleItems.
-    def enterModuleItems(self, ctx:JavaScriptParser.ModuleItemsContext):
+    # Enter a parse tree produced by JavaScriptParser#importModuleItems.
+    def enterImportModuleItems(self, ctx:JavaScriptParser.ImportModuleItemsContext):
         pass
 
-    # Exit a parse tree produced by JavaScriptParser#moduleItems.
-    def exitModuleItems(self, ctx:JavaScriptParser.ModuleItemsContext):
+    # Exit a parse tree produced by JavaScriptParser#importModuleItems.
+    def exitImportModuleItems(self, ctx:JavaScriptParser.ImportModuleItemsContext):
+        pass
+
+
+    # Enter a parse tree produced by JavaScriptParser#importAliasName.
+    def enterImportAliasName(self, ctx:JavaScriptParser.ImportAliasNameContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#importAliasName.
+    def exitImportAliasName(self, ctx:JavaScriptParser.ImportAliasNameContext):
+        pass
+
+
+    # Enter a parse tree produced by JavaScriptParser#moduleExportName.
+    def enterModuleExportName(self, ctx:JavaScriptParser.ModuleExportNameContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#moduleExportName.
+    def exitModuleExportName(self, ctx:JavaScriptParser.ModuleExportNameContext):
+        pass
+
+
+    # Enter a parse tree produced by JavaScriptParser#importedBinding.
+    def enterImportedBinding(self, ctx:JavaScriptParser.ImportedBindingContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#importedBinding.
+    def exitImportedBinding(self, ctx:JavaScriptParser.ImportedBindingContext):
         pass
 
 
@@ -140,6 +167,24 @@ class JavaScriptParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by JavaScriptParser#exportFromBlock.
     def exitExportFromBlock(self, ctx:JavaScriptParser.ExportFromBlockContext):
+        pass
+
+
+    # Enter a parse tree produced by JavaScriptParser#exportModuleItems.
+    def enterExportModuleItems(self, ctx:JavaScriptParser.ExportModuleItemsContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#exportModuleItems.
+    def exitExportModuleItems(self, ctx:JavaScriptParser.ExportModuleItemsContext):
+        pass
+
+
+    # Enter a parse tree produced by JavaScriptParser#exportAliasName.
+    def enterExportAliasName(self, ctx:JavaScriptParser.ExportAliasNameContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#exportAliasName.
+    def exitExportAliasName(self, ctx:JavaScriptParser.ExportAliasNameContext):
         pass
 
 
@@ -446,6 +491,33 @@ class JavaScriptParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by JavaScriptParser#methodDefinition.
     def exitMethodDefinition(self, ctx:JavaScriptParser.MethodDefinitionContext):
+        pass
+
+
+    # Enter a parse tree produced by JavaScriptParser#fieldDefinition.
+    def enterFieldDefinition(self, ctx:JavaScriptParser.FieldDefinitionContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#fieldDefinition.
+    def exitFieldDefinition(self, ctx:JavaScriptParser.FieldDefinitionContext):
+        pass
+
+
+    # Enter a parse tree produced by JavaScriptParser#classElementName.
+    def enterClassElementName(self, ctx:JavaScriptParser.ClassElementNameContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#classElementName.
+    def exitClassElementName(self, ctx:JavaScriptParser.ClassElementNameContext):
+        pass
+
+
+    # Enter a parse tree produced by JavaScriptParser#privateIdentifier.
+    def enterPrivateIdentifier(self, ctx:JavaScriptParser.PrivateIdentifierContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#privateIdentifier.
+    def exitPrivateIdentifier(self, ctx:JavaScriptParser.PrivateIdentifierContext):
         pass
 
 
@@ -1034,6 +1106,15 @@ class JavaScriptParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by JavaScriptParser#initializer.
+    def enterInitializer(self, ctx:JavaScriptParser.InitializerContext):
+        pass
+
+    # Exit a parse tree produced by JavaScriptParser#initializer.
+    def exitInitializer(self, ctx:JavaScriptParser.InitializerContext):
+        pass
+
+
     # Enter a parse tree produced by JavaScriptParser#assignable.
     def enterAssignable(self, ctx:JavaScriptParser.AssignableContext):
         pass
@@ -1049,15 +1130,6 @@ class JavaScriptParserListener(ParseTreeListener):
 
     # Exit a parse tree produced by JavaScriptParser#objectLiteral.
     def exitObjectLiteral(self, ctx:JavaScriptParser.ObjectLiteralContext):
-        pass
-
-
-    # Enter a parse tree produced by JavaScriptParser#FunctionDecl.
-    def enterFunctionDecl(self, ctx:JavaScriptParser.FunctionDeclContext):
-        pass
-
-    # Exit a parse tree produced by JavaScriptParser#FunctionDecl.
-    def exitFunctionDecl(self, ctx:JavaScriptParser.FunctionDeclContext):
         pass
 
 

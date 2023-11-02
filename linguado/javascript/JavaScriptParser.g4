@@ -52,6 +52,7 @@ statement
     | exportStatement
     | emptyStatement_
     | classDeclaration
+    | functionDeclaration
     | expressionStatement
     | ifStatement
     | iterationStatement
@@ -65,7 +66,6 @@ statement
     | throwStatement
     | tryStatement
     | debuggerStatement
-    | functionDeclaration
     ;
 
 block
@@ -81,12 +81,28 @@ importStatement
     ;
 
 importFromBlock
-    : importDefault? (importNamespace | moduleItems) importFrom eos
+    : importDefault? (importNamespace | importModuleItems) importFrom eos
     | StringLiteral eos
     ;
 
-moduleItems
-    : '{' (aliasName ',')* (aliasName ','?)? '}'
+importModuleItems
+    : '{' (importAliasName ',')* (importAliasName ','?)? '}'
+    ;
+
+importAliasName
+    : moduleExportName (As importedBinding)?
+    ;
+
+moduleExportName
+    : identifierName
+    | StringLiteral
+    ;
+
+// yield and await are permitted as BindingIdentifier in the grammar
+importedBinding
+    : Identifier
+    | Yield
+    | Await
     ;
 
 importDefault
@@ -106,13 +122,21 @@ aliasName
     ;
 
 exportStatement
-    : Export (exportFromBlock | declaration) eos    # ExportDeclaration
-    | Export Default singleExpression eos           # ExportDefaultDeclaration
+    : Export Default? (exportFromBlock | declaration) eos    # ExportDeclaration
+    | Export Default singleExpression eos                    # ExportDefaultDeclaration
     ;
 
 exportFromBlock
     : importNamespace importFrom eos
-    | moduleItems importFrom? eos
+    | exportModuleItems importFrom? eos
+    ;
+
+exportModuleItems
+    : '{' (exportAliasName ',')* (exportAliasName ','?)? '}'
+    ;
+
+exportAliasName
+    : moduleExportName (As moduleExportName)?
     ;
 
 declaration
@@ -151,8 +175,7 @@ iterationStatement
     | While '(' expressionSequence ')' statement                                                                              # WhileStatement
     | For '(' (expressionSequence | variableDeclarationList)? ';' expressionSequence? ';' expressionSequence? ')' statement   # ForStatement
     | For '(' (singleExpression | variableDeclarationList) In expressionSequence ')' statement                                # ForInStatement
-    // strange, 'of' is an identifier. and self.p("of") not work in sometime.
-    | For Await? '(' (singleExpression | variableDeclarationList) identifier{self.p("of")}? expressionSequence ')' statement  # ForOfStatement
+    | For Await? '(' (singleExpression | variableDeclarationList) Of expressionSequence ')' statement                         # ForOfStatement
     ;
 
 varModifier  // let, const - ECMAScript 6
@@ -238,15 +261,29 @@ classTail
     ;
 
 classElement
-    : (Static | {self.n("static")}? identifier | Async)* (methodDefinition | assignable '=' objectLiteral ';')
+    : (Static | {self.n("static")}? identifier)? methodDefinition
+    | (Static | {self.n("static")}? identifier)? fieldDefinition
+    | (Static | {self.n("static")}? identifier) block
     | emptyStatement_
-    | '#'? propertyName '=' singleExpression
     ;
 
 methodDefinition
-    : '*'? '#'? propertyName '(' formalParameterList? ')' functionBody
-    | '*'? '#'? getter '(' ')' functionBody
-    | '*'? '#'? setter '(' formalParameterList? ')' functionBody
+    : (Async {self.notLineTerminator()}?)? '*'? classElementName '(' formalParameterList? ')' functionBody
+    | '*'? getter '(' ')' functionBody
+    | '*'? setter '(' formalParameterList? ')' functionBody
+    ;
+
+fieldDefinition
+    : classElementName initializer?
+    ;
+
+classElementName
+    : propertyName
+    | privateIdentifier
+    ;
+
+privateIdentifier
+    : '#' identifierName
     ;
 
 formalParameterList
@@ -317,6 +354,7 @@ singleExpression
     | singleExpression '?.'? '[' expressionSequence ']'                     # MemberIndexExpression
     | singleExpression '?'? '.' '#'? identifierName                         # MemberDotExpression
     // Split to try `new Date()` first, then `new Date`.
+    | New identifier arguments                                              # NewExpression
     | New singleExpression arguments                                        # NewExpression
     | New singleExpression                                                  # NewExpression
     | singleExpression arguments                                            # ArgumentsExpression
@@ -362,6 +400,12 @@ singleExpression
     | '(' expressionSequence ')'                                            # ParenthesizedExpression
     ;
 
+initializer
+// TODO: must be `= AssignmentExpression` and we have such label alredy but it doesn't respect the specification.
+//  See https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Initializer
+    : '=' singleExpression
+    ;
+
 assignable
     : identifier
     | arrayLiteral
@@ -373,8 +417,7 @@ objectLiteral
     ;
 
 anonymousFunction
-    : functionDeclaration                                                       # FunctionDecl
-    | Async? Function_ '*'? '(' formalParameterList? ')' functionBody    # AnonymousFunctionDecl
+    : Async? Function_ '*'? '(' formalParameterList? ')' functionBody    # AnonymousFunctionDecl
     | Async? arrowFunctionParameters '=>' arrowFunctionBody                     # ArrowFunction
     ;
 
@@ -438,11 +481,11 @@ bigintLiteral
     ;
 
 getter
-    : {self.n("get")}? identifier propertyName
+    : {self.n("get")}? identifier classElementName
     ;
 
 setter
-    : {self.n("set")}? identifier propertyName
+    : {self.n("set")}? identifier classElementName
     ;
 
 identifierName
@@ -455,6 +498,9 @@ identifier
     | NonStrictLet
     | Async
     | As
+    | From
+    | Yield
+    | Of
     ;
 
 reservedWord
@@ -511,6 +557,7 @@ keyword
     | Await
     | From
     | As
+    | Of
     ;
 
 let_
