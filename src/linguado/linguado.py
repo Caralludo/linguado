@@ -26,7 +26,7 @@ from linguado.vba.vbaLexer import vbaLexer
 from linguado.vba.vbaParser import vbaParser
 
 
-def main():
+def linguado():
     language_functions = {
         "c": [CLexer, CParser, "translationUnit"],
         "javascript": [JavaScriptLexer, JavaScriptParser, "program"],
@@ -115,7 +115,3 @@ def main():
 
     write_matrix(wl_matrix, filenames, "./wl_" + args.output)
     write_matrix(isomorphism_matrix, filenames, "./isomorphism_" + args.output)
-
-
-if __name__ == "__main__":
-    main()

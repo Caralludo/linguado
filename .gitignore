@@ -3,3 +3,5 @@ venv/
 *.csv
 data_to_test/
 __pycache__
+build
+

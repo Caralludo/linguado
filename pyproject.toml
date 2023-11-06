@@ -1,6 +1,6 @@
 [project]
 name = "linguado"
-version = "0.1.0"
+version = "0.2.0"
 description = "Linguado is a tool which compares the AST of two or more files"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -31,4 +31,4 @@ dependencies = [
 repository = "https://github.com/Caralludo/linguado.git"
 
 [project.scripts]
-linguado = "linguado.main:main"
+linguado = "linguado:main"

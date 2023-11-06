@@ -1,0 +1,2 @@
+[console_scripts]
+linguado = linguado:main
