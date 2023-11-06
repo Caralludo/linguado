@@ -23,7 +23,6 @@ dependencies = [
     "igraph",
     "networkx",
     "antlr4-python3-runtime",
-    "scipy",
     "setuptools"
 ]
 
